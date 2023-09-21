@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OptionsViewController" customModule="GoodNews" customModuleProvider="target">
+            <connections>
+                <outlet property="countryPicker" destination="ZdT-uu-Rzx" id="T1S-Qe-KeH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="oO1-qy-5Qx">
+                    <rect key="frame" x="20" y="89" width="353" height="256.33333333333331"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="WSM-4H-5bv">
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="34.333333333333336"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdY-OH-vUB">
+                                    <rect key="frame" x="0.0" y="0.0" width="179.33333333333334" height="34.333333333333336"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1F6-Sk-5RV">
+                                    <rect key="frame" x="288.66666666666669" y="0.0" width="64.333333333333314" height="34.333333333333336"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Done">
+                                        <backgroundConfiguration key="background">
+                                            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </backgroundConfiguration>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="doneBtnPressed:" destination="-1" eventType="touchUpInside" id="JXa-GO-td5"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZdT-uu-Rzx">
+                            <rect key="frame" x="0.0" y="40" width="320" height="216"/>
+                        </pickerView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="WSM-4H-5bv" firstAttribute="top" secondItem="oO1-qy-5Qx" secondAttribute="top" id="25q-HY-hmV"/>
+                        <constraint firstItem="ZdT-uu-Rzx" firstAttribute="leading" secondItem="oO1-qy-5Qx" secondAttribute="leading" id="Bbv-Qq-jjJ"/>
+                        <constraint firstAttribute="trailing" secondItem="WSM-4H-5bv" secondAttribute="trailing" id="Evu-58-QzT"/>
+                        <constraint firstItem="WSM-4H-5bv" firstAttribute="leading" secondItem="oO1-qy-5Qx" secondAttribute="leading" id="GBn-9V-Nxb"/>
+                        <constraint firstAttribute="trailing" secondItem="ZdT-uu-Rzx" secondAttribute="trailing" constant="33" id="kDW-yh-uMI"/>
+                        <constraint firstAttribute="bottom" secondItem="ZdT-uu-Rzx" secondAttribute="bottom" id="ndB-Fu-gDP"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemGray5Color"/>
+            <constraints>
+                <constraint firstItem="oO1-qy-5Qx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="8Vv-cy-dq8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oO1-qy-5Qx" secondAttribute="trailing" constant="20" id="IXI-JK-wpu"/>
+                <constraint firstItem="oO1-qy-5Qx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="zhj-Uj-rce"/>
+            </constraints>
+            <point key="canvasLocation" x="91" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
